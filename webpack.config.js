@@ -5,6 +5,9 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    disableHostCheck: true
+  },
   devtool: 'source-map',
   entry: './src/app.jsx',
   output: {
