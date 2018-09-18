@@ -37,6 +37,8 @@ requestAnimationFrame(animate);
 
 const panelWidth = 400;
 
+let intervalHandle = 0;
+
 class TrafficFlow extends React.Component {
   constructor (props) {
     super(props);
@@ -164,12 +166,15 @@ class TrafficFlow extends React.Component {
     this.checkInitialRoute();
     this.beginSampleData();
 
+    const self = this;
+    intervalHandle = setInterval(() => { self.beginSampleData(self); }, 10000);
     // Listen for changes to the stores
-    filterStore.addChangeListener(this.filtersChanged);
+    // filterStore.addChangeListener(this.filtersChanged);
   }
 
   componentWillUnmount () {
     filterStore.removeChangeListener(this.filtersChanged);
+    clearInterval(intervalHandle);
   }
 
   shouldComponentUpdate (nextProps, nextState) {
