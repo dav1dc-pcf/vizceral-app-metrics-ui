@@ -152,7 +152,7 @@ class TrafficFlow extends React.Component {
 
   beginSampleData () {
     this.traffic = { nodes: [], connections: [] };
-    request.get('sample_data.json')
+    request.get('http://vz-metrics-adapter.apps.az.dav3.io/index.py')
       .set('Accept', 'application/json')
       .end((err, res) => {
         if (res && res.status === 200) {
@@ -167,7 +167,7 @@ class TrafficFlow extends React.Component {
     this.beginSampleData();
 
     const self = this;
-    intervalHandle = setInterval(() => { self.beginSampleData(self); }, 10000);
+    intervalHandle = setInterval(() => { self.beginSampleData(self); }, 4000);
     // Listen for changes to the stores
     // filterStore.addChangeListener(this.filtersChanged);
   }
