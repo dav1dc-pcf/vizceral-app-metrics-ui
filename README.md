@@ -2,7 +2,7 @@
 
 # Vizceral App Metrics UI
 
-This project was forked from [vizceral-example](https://github.com/Netflix/vizceral-example)
+This project was forked from [Netflix/vizceral-example](https://github.com/Netflix/vizceral-example)
 
 # Setup
 1. Set the end-point where you have deployed [vz-metrics-adapter](https://github.com/dav1dc-pcf/vz-metrics-adapter) in `src/components/trafficFlow.jsx`:
