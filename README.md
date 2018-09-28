@@ -8,7 +8,7 @@ This project was forked from [vizceral-example](https://github.com/Netflix/vizce
 1. Set the end-point where you have deployed in `src/components/trafficFlow.jsx`:
 
 ```
-    request.get('http://vz-metrics-adapter.apps.az.dav3.io/index.py')
+    request.get('http://vz-metrics-adapter.your-pcf.com/index.py')
 ```
 
 One may also wish to tweak the interval for background refresh of the data in the same file:
@@ -22,10 +22,10 @@ One may also wish to tweak the interval for background refresh of the data in th
 ```
 cf login
 ....
-cf target -o yourorg -s vz-ui-space
+cf target -o your-org -s vz-ui-space
 cf push vizceral-app-metrics-ui
 ```
 
-3. Ensure that ** and ** have also been configured and deployed to your PCF/CF Foundation
+3. Ensure that at least one instance of *app-metrics-nozzle* and *vz-metrics-adapter* have also been configured and deployed to your PCF/CF Foundation
 
 3. Open the resulting URL of the *vizceral-app-metrics-ui* application in your browser
