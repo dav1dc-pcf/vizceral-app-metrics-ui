@@ -28,6 +28,6 @@ cf push vizceral-app-metrics-ui
 
 3. Ensure that at least one instance of [app-metrics-nozzle](https://github.com/dav1dc-pcf/app-metrics-nozzle) and exactly one instance of [vz-metrics-adapter](https://github.com/dav1dc-pcf/vz-metrics-adapter) have also been configured and deployed to your PCF/CF Foundation(s)
 
-4. Open the resulting URL of the *vizceral-app-metrics-ui* application in your browser
+4. Open the resulting URL of the **vizceral-app-metrics-ui** application in your browser
 
-5. Enjoy!
+5. **Enjoy!**
