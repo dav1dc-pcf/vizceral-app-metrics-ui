@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 1024MB
+  instances: 1
+  name: vizceral-app-metrics-ui
+  disk_quota: 1024M
+  command: "npm run dev"
+  buildpacks: 
+  - https://github.com/cloudfoundry/nodejs-buildpack.git
